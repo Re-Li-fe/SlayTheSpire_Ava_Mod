@@ -1,0 +1,13 @@
+{
+  "modid": "Ava",
+  "name": "Ava",
+  "author_list": [
+    "relife"
+  ],
+  "description": "AvavaAva，这里是为A-SOUL的向晚制作的mod。B站搜索向晚大魔王，关注向晚，为时不晚！",
+  "dependencies": [
+    "basemod"
+  ],
+  "version": "0.0.1",
+  "sts_version": "25-01-2023"
+}

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.relife</groupId>
+    <artifactId>ava</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <Steam.path>E:\Game\Steam\steamapps</Steam.path>
+        <Repository.path>E:\m2\repository</Repository.path>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>com.evacipated.cardcrawl</groupId>
+            <artifactId>modthespire</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${Repository.path}/evacipated/cardcrawl/ModTheSpire.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.evacipated.cardcrawl</groupId>
+            <artifactId>baseMod</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${Repository.path}/evacipated/cardcrawl/BaseMod.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.evacipated.cardcrawl</groupId>
+            <artifactId>desktop-1.0</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${Repository.path}/evacipated/cardcrawl/desktop-1.0.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.evacipated.cardcrawl.mod</groupId>
+            <artifactId>StSLib</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${Repository.path}/evacipated/cardcrawl/StSLib.jar</systemPath>
+        </dependency>
+    </dependencies>
+    <build>
+        <finalName>ava</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>1.8</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <configuration>
+                            <target>
+                                <!-- This moves your mod into a common folder where all mods you make can go. -->
+                                <copy file="target/${project.artifactId}.jar" tofile="${Steam.path}/common/SlayTheSpire/mods/${project.artifactId}.jar"/>
+                            </target>
+                        </configuration>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

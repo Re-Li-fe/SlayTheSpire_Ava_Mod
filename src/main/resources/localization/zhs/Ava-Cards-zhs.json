@@ -1,0 +1,14 @@
+{
+  "Ava:Strike_Ava": {
+    "NAME": "给你一拳",
+    "DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "Ava:Defend_Ava": {
+    "NAME": "木头",
+    "DESCRIPTION": "获得 !B! 点格挡。"
+  },
+  "Ava:NotWell_Ava": {
+    "NAME": "不好不好",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。"
+  }
+}
